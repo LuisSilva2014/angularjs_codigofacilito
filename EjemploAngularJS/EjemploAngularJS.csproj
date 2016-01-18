@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{66AF4FBD-CE71-4F1A-BF09-F192031CC392}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EjemploAngularJS</RootNamespace>
+    <AssemblyName>EjemploAngularJS</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.0.0\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.0.0\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.0.0\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="Sapp\js\angular.js" />
+    <Content Include="Sapp\js\controlador.js" />
+    <Content Include="Scripts\modulo1.js" />
+    <Content Include="Sapp\.gitignore" />
+    <Content Include="Sapp\assets\js-project\project.js" />
+    <Content Include="Sapp\assets\js\bootstrap.js" />
+    <Content Include="Sapp\assets\js\datepicker.js" />
+    <Content Include="Sapp\assets\js\form-adv-label.js" />
+    <Content Include="Sapp\assets\js\form-adv-textarea.js" />
+    <Content Include="Sapp\assets\js\header.js" />
+    <Content Include="Sapp\assets\js\menu.js" />
+    <Content Include="Sapp\assets\js\snackbar.js" />
+    <Content Include="Sapp\assets\js\tab.js" />
+    <Content Include="Sapp\assets\js\tile.js" />
+    <Content Include="Sapp\assets\js\wave.js" />
+    <Content Include="Sapp\assets\js\webfont.js" />
+    <Content Include="Sapp\assets\js\_.js" />
+    <Content Include="Sapp\css\base.css" />
+    <Content Include="Sapp\css\base.min.css" />
+    <Content Include="Sapp\css\images\bg\amber.jpg" />
+    <Content Include="Sapp\css\images\bg\brand.jpg" />
+    <Content Include="Sapp\css\images\bg\green.jpg" />
+    <Content Include="Sapp\css\images\bg\purple.jpg" />
+    <Content Include="Sapp\css\images\bg\red.jpg" />
+    <Content Include="Sapp\css\images\bg\teal.jpg" />
+    <Content Include="Sapp\css\project.css" />
+    <Content Include="Sapp\css\project.min.css" />
+    <Content Include="Sapp\favicon.ico" />
+    <Content Include="Sapp\Gruntfile.js" />
+    <Content Include="Sapp\images\samples\landscape.jpg" />
+    <Content Include="Sapp\images\samples\portrait.jpg" />
+    <Content Include="Sapp\images\screenshots\material01.png" />
+    <Content Include="Sapp\images\screenshots\material02.png" />
+    <Content Include="Sapp\images\screenshots\material03.png" />
+    <Content Include="Sapp\images\users\avatar-001.jpg" />
+    <Content Include="Sapp\js\base.js" />
+    <Content Include="Sapp\js\base.min.js" />
+    <Content Include="Sapp\js\project.js" />
+    <Content Include="Sapp\js\project.min.js" />
+    <Content Include="Sapp\templates\index.html" />
+    <Content Include="Sapp\templates\page-login.html" />
+    <Content Include="Sapp\templates\ui-affix.html" />
+    <Content Include="Sapp\templates\ui-avatar.html" />
+    <Content Include="Sapp\templates\ui-button-fab.html" />
+    <Content Include="Sapp\templates\ui-button.html" />
+    <Content Include="Sapp\templates\ui-card.html" />
+    <Content Include="Sapp\templates\ui-collapse.html" />
+    <Content Include="Sapp\templates\ui-data-table.html" />
+    <Content Include="Sapp\templates\ui-dialog.html" />
+    <Content Include="Sapp\templates\ui-dropdown-menu.html" />
+    <Content Include="Sapp\templates\ui-icon.html" />
+    <Content Include="Sapp\templates\ui-label.html" />
+    <Content Include="Sapp\templates\ui-modal.html" />
+    <Content Include="Sapp\templates\ui-nav-drawer.html" />
+    <Content Include="Sapp\templates\ui-nav.html" />
+    <Content Include="Sapp\templates\ui-picker.html" />
+    <Content Include="Sapp\templates\ui-progress.html" />
+    <Content Include="Sapp\templates\ui-selection-control.html" />
+    <Content Include="Sapp\templates\ui-snackbar.html" />
+    <Content Include="Sapp\templates\ui-tab.html" />
+    <Content Include="Sapp\templates\ui-text-field.html" />
+    <Content Include="Sapp\templates\ui-tile.html" />
+    <Content Include="Sapp\templates\ui-toolbar.html" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="Sapp\assets\sass-project\project.scss" />
+    <Content Include="Sapp\assets\sass\addons\material-design-icons\_core.scss" />
+    <Content Include="Sapp\assets\sass\addons\material-design-icons\_larger.scss" />
+    <Content Include="Sapp\assets\sass\addons\material-design-icons\_path.scss" />
+    <Content Include="Sapp\assets\sass\addons\material-design-icons\_variables.scss" />
+    <Content Include="Sapp\assets\sass\addons\_material-design-icons.scss" />
+    <Content Include="Sapp\assets\sass\addons\_waves.scss" />
+    <Content Include="Sapp\assets\sass\base.scss" />
+    <Content Include="Sapp\assets\sass\base\_grid.scss" />
+    <Content Include="Sapp\assets\sass\base\_reset.scss" />
+    <Content Include="Sapp\assets\sass\components\_avatar.scss" />
+    <Content Include="Sapp\assets\sass\components\_breadcrumb.scss" />
+    <Content Include="Sapp\assets\sass\components\_button-flat.scss" />
+    <Content Include="Sapp\assets\sass\components\_button-float.scss" />
+    <Content Include="Sapp\assets\sass\components\_button.scss" />
+    <Content Include="Sapp\assets\sass\components\_card.scss" />
+    <Content Include="Sapp\assets\sass\components\_code.scss" />
+    <Content Include="Sapp\assets\sass\components\_dropdown.scss" />
+    <Content Include="Sapp\assets\sass\components\_form-adv-checkbox.scss" />
+    <Content Include="Sapp\assets\sass\components\_form-adv-datepicker.scss" />
+    <Content Include="Sapp\assets\sass\components\_form-adv-label.scss" />
+    <Content Include="Sapp\assets\sass\components\_form-adv-switch.scss" />
+    <Content Include="Sapp\assets\sass\components\_form-adv-textarea.scss" />
+    <Content Include="Sapp\assets\sass\components\_form.scss" />
+    <Content Include="Sapp\assets\sass\components\_label.scss" />
+    <Content Include="Sapp\assets\sass\components\_modal.scss" />
+    <Content Include="Sapp\assets\sass\components\_nav.scss" />
+    <Content Include="Sapp\assets\sass\components\_progress-circular.scss" />
+    <Content Include="Sapp\assets\sass\components\_progress-loadbar.scss" />
+    <Content Include="Sapp\assets\sass\components\_progress.scss" />
+    <Content Include="Sapp\assets\sass\components\_snackbar.scss" />
+    <Content Include="Sapp\assets\sass\components\_tab.scss" />
+    <Content Include="Sapp\assets\sass\components\_table.scss" />
+    <Content Include="Sapp\assets\sass\components\_tile.scss" />
+    <Content Include="Sapp\assets\sass\elements\_content.scss" />
+    <Content Include="Sapp\assets\sass\elements\_footer.scss" />
+    <Content Include="Sapp\assets\sass\elements\_header.scss" />
+    <Content Include="Sapp\assets\sass\elements\_menu.scss" />
+    <Content Include="Sapp\assets\sass\mixin\_css3.scss" />
+    <Content Include="Sapp\assets\sass\mixin\_grid.scss" />
+    <Content Include="Sapp\assets\sass\mixin\_responsive.scss" />
+    <Content Include="Sapp\assets\sass\mixin\_utilities.scss" />
+    <Content Include="Sapp\assets\sass\utilities\_print.scss" />
+    <Content Include="Sapp\assets\sass\utilities\_utilities-responsive.scss" />
+    <Content Include="Sapp\assets\sass\utilities\_utilities.scss" />
+    <Content Include="Sapp\assets\sass\var\_colours.scss" />
+    <Content Include="Sapp\assets\sass\var\_variables.scss" />
+    <Content Include="Sapp\css\fonts\codepoints" />
+    <Content Include="Sapp\css\fonts\MaterialIcons-Regular.eot" />
+    <Content Include="Sapp\css\fonts\MaterialIcons-Regular.ijmap" />
+    <Content Include="Sapp\css\fonts\MaterialIcons-Regular.ttf" />
+    <Content Include="Sapp\css\fonts\MaterialIcons-Regular.woff" />
+    <Content Include="Sapp\css\fonts\MaterialIcons-Regular.woff2" />
+    <Content Include="Sapp\css\fonts\README.md" />
+    <Content Include="Sapp\LICENSE" />
+    <Content Include="Sapp\package.json" />
+    <Content Include="Sapp\README.md" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>5540</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:5540/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
