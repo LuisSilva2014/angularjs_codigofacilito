@@ -1,24 +1,34 @@
 ﻿
-//* INYECCION DE DEPENDENCIAS
+//* 7- 8.- Curso AngularJS - AJAX con $http
 angular.module("MiprimerModulo", [])
-    .controller("PrimerControlador", ["$scope", function (m) {
-        m.nombre = "Luis silva";
-        m.nuevoComentario = {};
-        m.comentarios = [
-            {
-                comentario: "Buen comentario",
-                usuario: "luissilva"
-            },
-            {
-                comentario: "Buen comentario2",
-                usuario: "luissilva2"
-            }
-        ];
-        m.agregarComentario = function () {
-            //Two way databing
-            m.comentarios.push($scope.nuevoComentario);
-            m.nuevoComentario = {};
+    .controller("PrimerControlador",function ($scope, $http) {
+        $scope.publicaciones=[];
+        $scope.newPost ={};
 
-            //para reiniciar el sistema de comentarios se agrega o siguiente:
+        $http.get("http://jsonplaceholder.typicode.com/posts")
+            .success(function(data){
+                console.log(data);
+                $scope.publicaciones = data;
+
+            }
+            
+            ).error (function(err){
+            
+            });
+
+        $scope.addPost = function(){
+            $http.post("http://jsonplaceholder.typicode.com/posts",{
+                title:$scope.newPost.tite,
+                body: $scope.newPost.body,
+                userId: 1
+            })
+            .success(function(data, status, headers, config){
+                console.log(data);
+                $scope.publicaciones.push($scope.newPost);
+                $scope.newPost ={};
+            }        
+            ).error (function(error, status, headers, config){
+                console.log(error)
+            });
         }
-    }]);
+    });;
