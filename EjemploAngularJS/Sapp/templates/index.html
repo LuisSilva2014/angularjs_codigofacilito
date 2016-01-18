@@ -167,18 +167,21 @@
                         <div class="card-header">
                                 <h1>Test</h1>
                         </div>
-                        <div  >
-                            <input type="text" ng-model="newPost.title" name="name" value=" " /> <br />
-                            <textarea  ng-model="newPost.body" >     </textarea>
-                            <button class="" ng-click="addPost()">Enviar    </button>
-                        </div>
-                        <h3>API Consumo</h3>
-                        <ul>
-                            <li ng-repeat="post in publicaciones">
-                                {{post.title}}
-                            </li>    
-                        </ul>
-                    </section>
+                        <form ng-submit="addActivity()">
+                                <input type="text" ng-model="newActivity.description">
+                                <br />
+                                <input type="datetime-local" ng-model="newActivity.date">
+                        </form>
+                        <button ng-click="clean()">Limpiar</button>
+
+                            <h3>To do List</h3>
+                            <ul>
+                                <li ng-repeat="activity in toDo">
+                                       <!--Para agregar un filtro se aggrega | en este caso para la fecha-->
+                                    {{activity.description}} - {{activity.date | date: 'short'}}
+                                </li>
+                            </ul>
+</section>
                 </div>
             </div>
 
@@ -198,10 +201,13 @@
     </div>
     <!-- js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+
     <script src="../js/base.min.js"></script>
     <!-- js for doc -->
     <script src="../js/project.min.js"></script>
     <script src="../js/angular.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular-local-storage/0.2.2/angular-local-storage.min.js'></script>
     <script src="../js/controlador.js"></script>
 </body>
 </html>
