@@ -1,8 +1,10 @@
-﻿angular.module("MiprimerModulo", [])
-    .controller("PrimerControlador", function ($scope) {
-        $scope.nombre = "Luis silva";
-        $scope.nuevoComentario = {};
-        $scope.comentarios = [
+﻿
+//* INYECCION DE DEPENDENCIAS
+angular.module("MiprimerModulo", [])
+    .controller("PrimerControlador", ["$scope", function (m) {
+        m.nombre = "Luis silva";
+        m.nuevoComentario = {};
+        m.comentarios = [
             {
                 comentario: "Buen comentario",
                 usuario: "luissilva"
@@ -12,14 +14,11 @@
                 usuario: "luissilva2"
             }
         ];
-        $scope.agregarComentario = function () {
+        m.agregarComentario = function () {
             //Two way databing
-            $scope.comentarios.push($scope.nuevoComentario);
-            $scope.nuevoComentario = {};
-                
+            m.comentarios.push($scope.nuevoComentario);
+            m.nuevoComentario = {};
+
             //para reiniciar el sistema de comentarios se agrega o siguiente:
         }
-    });
-
-
-
+    }]);
