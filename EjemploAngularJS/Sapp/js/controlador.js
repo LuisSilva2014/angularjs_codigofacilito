@@ -1,31 +1,21 @@
 ﻿
-//* 9- To do List
-var app = angular.module("MiprimerModulo", ["LocalStorageModule"])
-.controller("PrimerControlador", function ($scope, localStorageService) {
-    //primero verifamos si tenemos algon el el localstorege atraves de la clave angular-myToDoList
-    if (localStorageService.get("angular-myToDoList")) {
-        $scope.toDo = localStorageService.get("angular-myToDoList");
-    }
-    else{
-        $scope.toDo = [];
-    }
-    //para hacer refactory del codigo es utilizando el metodo Watch
-    $scope.$watchCollection('toDo',function(newValue,oldValue){
-        localStorageService.set("angular-myToDoList",$scope.toDo)    ;
-    });
-    $scope.addActivity = function(){
-        $scope.toDo.push($scope.newActivity);
-        $scope.newActivity = {};
+//* 10.- Curso AngularJS - Filters
+var app = angular.module("MiprimerModulo", [])
+    .filter("removeHtml", function () {
+        return function (texto) {
+            //Aca personalizamos nuestro filtro
 
-        //cada vez que se hace la modificacion de la lista se debe actulizar localStorageService
+            // lo que le estoy diciendo al replace es que los replace por '' (es decir vacio)
+            return String(texto).replace(/<[^>]+>/gm,'');
+        }
+    })
+    .controller("FiltroControlador", function ($scope) {
+        $scope.mi_html = "<p>Hola mundo</p>";
 
-        //   localStorageService.set("angular-myToDoList",$scope.toDo); Al tener el wath nos ahorramos esta línea
-        //angular-myToDoList es mi lista por hacer que va a ser buscada en el localstorage para agregar o mostrar listas de tareas. / angular-myToDoList is my list to do to be sought in the localStorage to add or display lists.
-    }
-    $scope.clean = function(){
-        $scope.toDo = [];
-        // localStorageService.set("angular-myToDoList",$scope.toDo); Al tener el wath nos ahorramos esta línea
-    }    //Tambien se puede optimizar agregandolo en el html al boton que llama clean asi
-    //<butto ng-click="toDo =[]">
+        $scope.mi_json = {};
+        $scope.mi_json.title = "hola"; // de esta fomra construyo un json de forma implicita
+        $scope.mi_json.body = "hola mundo";
+
+        $scope.costo = 34;
 });
 

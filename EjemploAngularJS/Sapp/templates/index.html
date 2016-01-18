@@ -149,39 +149,39 @@
                 </div>
             </div>
         </div>
-        <!---------------------------------------controller="PrimerControlador"---------------------->
-        <div class="container" ng-controller="PrimerControlador">
+        <!---------------------------------------controller="FiltroControlador"---------------------->
+        <div class="container" ng-controller="FiltroControlador">
             <div class="row">
                 <div class="col-lg-6 col-lg-push-3 col-sm-10 col-sm-push-1">
-                    <section class="content-inner margin-top-no">
+                    <section class="">
                         <h2 class="content-sub-heading">Practica de Angular JS</h2>
                         <p>by Google Material Design </p>
-                        <div class="tile-wrap">
-                            <a class="tile waves-attach" href="ui-button.html">
-                                <div class="tile-inner">
-                                    <span>Buttons</span>
-                                </div>
-                            </a>
-                        </div>
 
                         <div class="card-header">
-                                <h1>Test</h1>
+                            <h1>10.- Curso AngularJS - Filters</h1>
                         </div>
-                        <form ng-submit="addActivity()">
-                                <input type="text" ng-model="newActivity.description">
-                                <br />
-                                <input type="datetime-local" ng-model="newActivity.date">
-                        </form>
-                        <button ng-click="clean()">Limpiar</button>
+                        
+                        <!--formato para motrar en angular{{ mi}}-->
+                        <ul>
+                            {{ mi_html | removeHtml}}
+                        </ul>
 
-                            <h3>To do List</h3>
-                            <ul>
-                                <li ng-repeat="activity in toDo">
-                                       <!--Para agregar un filtro se aggrega | en este caso para la fecha-->
-                                    {{activity.description}} - {{activity.date | date: 'short'}}
-                                </li>
-                            </ul>
-</section>
+                        <ul>
+                            {{ mi_json | json}}
+                        
+                        </ul>
+
+
+                        <ul>
+                            {{ costo | currency}} 
+                        </ul>
+                        <ul>
+                            {{ costo | currency: '?'}}
+                        </ul>
+                        <ul>
+                            {{ costo | currency: 'K'}}
+                        </ul>
+                    </section>
                 </div>
             </div>
 
