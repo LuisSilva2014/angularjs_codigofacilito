@@ -157,30 +157,17 @@
                         <h2 class="content-sub-heading">Practica de Angular JS</h2>
                         <p>by Google Material Design </p>
 
-                        <div class="card-header">
-                            <h1>10.- Curso AngularJS - Filters</h1>
-                        </div>
-                        
-                        <!--formato para motrar en angular{{ mi}}-->
-                        <ul>
-                            {{ mi_html | removeHtml}}
-                        </ul>
+                        <h1>{{nombre}}</h1>
+                        <!--al activar la siguiente linea se debe quitar 
+                        //document.querySelector("#mi_boton").addEventListers("click", function () {
+                        //    $scope.$apply(function () {
+                        //        $scope.nombre = "Codigo facilito2";
+                        //    })
+                        //});-->
 
-                        <ul>
-                            {{ mi_json | json}}
-                        
-                        </ul>
+                        <!--<button ng-click="nombre:'Codigo facilito 3'"></button>-->
+                        <button id="mi_boton">Haz clic aqui</button>
 
-
-                        <ul>
-                            {{ costo | currency}} 
-                        </ul>
-                        <ul>
-                            {{ costo | currency: '?'}}
-                        </ul>
-                        <ul>
-                            {{ costo | currency: 'K'}}
-                        </ul>
                     </section>
                 </div>
             </div>
@@ -202,12 +189,30 @@
     <!-- js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
-
     <script src="../js/base.min.js"></script>
-    <!-- js for doc -->
     <script src="../js/project.min.js"></script>
     <script src="../js/angular.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/angular-local-storage/0.2.2/angular-local-storage.min.js'></script>
-    <script src="../js/controlador.js"></script>
+    <!--<script src="../js/controlador.js"></script>-->
+    <script>        
+        // 11.- Curso AngularJS - $watch, $apply y $digest
+        // URL VIDEO: https://www.youtube.com/watch?v=03WQ4PjoA5A
+        var app = angular.module("MiprimerModulo", [])
+            .controller("FiltroControlador", function ($scope) {
+                $scope.nombre = "Mi nombre";
+                // funcion que se ejecuta cuando pasan dos segundos
+                //setTimeout(function () {
+                //    $scope.$apply(function () {
+                //        $scope.nombre = "Codigo facilito";
+                //    });
+                //}, 2000);
+
+                document.querySelector("#mi_boton").addEventListener("click", function () {
+                    $scope.$apply(function () {
+                        $scope.nombre = "Codigo facilito2";
+                    })
+                });
+            });
+    </script>
 </body>
 </html>

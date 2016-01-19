@@ -17,5 +17,7 @@ var app = angular.module("MiprimerModulo", [])
         $scope.mi_json.body = "hola mundo";
 
         $scope.costo = 34;
-});
+    });
 
+
+//quede por la 11 y la estan guardados los cambios
